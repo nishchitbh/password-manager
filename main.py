@@ -41,7 +41,7 @@ def strength_check(password): # Checks strength of passwords by converting each 
         return("STRONG")
 
 
-def asc_to_txt(asc): # Returns number of types of characters
+def asc_to_txt(asc): # Returns types of characters
     if asc >= 65 and asc <= 90:
         return 'U'
     elif asc >= 48 and asc <= 57:
