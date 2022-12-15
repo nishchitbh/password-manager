@@ -50,5 +50,5 @@ def asc_to_txt(asc):
     else:
         return 'S'
 
-
+## Test and debug
 print(strength_check("Hello123$%^"))
