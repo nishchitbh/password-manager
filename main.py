@@ -27,7 +27,8 @@ def main():
 
 
 # checking strength
-def strength_check(password):
+def strength_check(password): # Checks strength of passwords by converting each string to ASCII code and counting
+                              # types of characters
     length = len(password)
     a = list(map(ord, password))
     combinations = list(map(asc_to_txt, a))
@@ -40,7 +41,7 @@ def strength_check(password):
         return("STRONG")
 
 
-def asc_to_txt(asc):
+def asc_to_txt(asc): # Returns number of types of characters
     if asc >= 65 and asc <= 90:
         return 'U'
     elif asc >= 48 and asc <= 57:
