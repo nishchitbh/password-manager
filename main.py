@@ -1,9 +1,19 @@
+# Importing requirements
 import random
 import os
 
-ip = "Users-Pwds.txt"
-op = "Users-Pwds-Chked.txt"
 
-a = open(ip, 'w')
-a.write('Nishchit, kathmandu')
-a.close()
+# Main function
+def main():
+    # Setting up variables
+    ip = "./Users-Pwds.txt"
+    op = "Users-Pwds-Chked.txt"
+
+    # Displaying description
+    input_file = open("Users-Pwds.txt", 'r')
+    pass
+
+# reading file
+def strength_check():
+    pass
+
