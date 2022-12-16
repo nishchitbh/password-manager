@@ -11,3 +11,5 @@ for i in a:
 
 usrpwds |= {usernames[i]: passwords[i] for i in range(len(usernames))}
 print(usrpwds)
+for i in usrpwds:
+    print(i)

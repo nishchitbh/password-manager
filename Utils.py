@@ -24,6 +24,6 @@ def extractor(lines):  # Takes list of lines as input
     return usrpwds
 
 
-upper = [a for a in range(65, 91)]
-lower = [a for a in range(97, 123)]
-numbers = [a for a in range(48, 58)]
+upperasc = [a for a in range(65, 91)]
+lowerasc = [a for a in range(97, 123)]
+numbersasc = [a for a in range(48, 58)]

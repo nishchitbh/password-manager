@@ -11,18 +11,24 @@ from Utils import *
 def main():
     # Setting up variables
     ip = "./Users-Pwds.txt"
-    op = "Users-Pwds-Chked.txt"
+    op = "./Users-Pwds-Chked.txt"
 
     # Displaying description
-    input_file = open("Users-Pwds.txt", 'r')
+    input_file = open(ip, 'r')
+    output_file = open(op, 'a')
     lines = input_file.readlines()
     usrpwds = extractor(lines)
-    for i in passwords:
-        pass
+    for a in usrpwds:
+        upwds = [a, usrpwds[a]]
+        strength = rank(usrpwds[a])
+        upwds.append(strength + '\n')
+        upstr = (', ').join(upwds)
+        output_file.write(upstr)
+    output_file.close()
 
 
 # checking strength
-def strength_check(password):  # Checks strength of passwords by converting each string to ASCII code and counting
+def rank(password):  # Checks strength of passwords by converting each string to ASCII code and counting
     # types of characters
     length = len(password)
     a = list(map(ord, password))
@@ -35,6 +41,4 @@ def strength_check(password):  # Checks strength of passwords by converting each
     else:
         return ("STRONG")
 
-
 ## Test and debug
-print(strength_check("Hello123$%^"))
