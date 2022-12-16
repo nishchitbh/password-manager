@@ -1,15 +1,10 @@
 # Importing requirements
 import random
 import os
+from Utils import *
 
 
 # extract passwords
-def extractor(lines):  # Takes list of lines as input
-    pw = []
-    for i in lines:
-        pwd = i.replace('\n', '').split(',')[-1].lstrip()
-        pw.append(pwd)
-    return pw
 
 
 # Main function
@@ -41,15 +36,6 @@ def strength_check(password): # Checks strength of passwords by converting each 
         return("STRONG")
 
 
-def asc_to_txt(asc): # Returns types of characters
-    if asc >= 65 and asc <= 90:
-        return 'U'
-    elif asc >= 48 and asc <= 57:
-        return 'N'
-    elif asc >= 97 and asc <= 122:
-        return 'L'
-    else:
-        return 'S'
 
 ## Test and debug
 print(strength_check("Hello123$%^"))
